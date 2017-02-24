@@ -9,5 +9,8 @@
     "express": "^4.14.1",
     "forecastio": "^1.0.2",
     "zippity-do-dah": "0.0.2"
+  },
+  "engines": {
+    "node": "4.2.x"
   }
 }

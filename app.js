@@ -6,6 +6,8 @@ var Forecastio = require('forecastio');
 var app = express();
 var weather = new Forecastio('c997a6d0090fb4f6ee44cece98e9cfcc');
 
+app.set("port", process.env.PORT || 3000);
+
 app.use(express.static(path.resolve(__dirname, "public")));
 
 app.set("views", path.resolve(__dirname, "views"));
@@ -42,5 +44,3 @@ app.get(/^\/(\d{5})$/, function(req, res, next){
 app.use(function(req,res){
   res.status(404).render("404");
 });
-
-app.listen(3000);
